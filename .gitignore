@@ -1,0 +1,7 @@
+*tokenizer*
+*safetensors*
+anli/
+anli_reanalyzed/
+multinli/
+snli/
+*e.txt
