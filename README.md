@@ -3,28 +3,32 @@ Andreas Johansson repository for LT2326 final project
 
 Content (as of submission):
 project.ipynb - main code, notebook designed to be runnable as a script
+
 data/
-    chaosNLI - project testsets, also used as training data for toy run
-        generated through terminal commands from here: https://github.com/easonnie/ChaosNLI, not setup in code
-    NLI_variation - testset from here: https://github.com/epavlick/NLI-variation-data
-        setup in notebook w/ requests library
-    not in submission due to size, all training sets:
-        Stanford NLI
-        MultiNLI
-        Adversarial NLI
-        all built from terminal from here: https://github.com/facebookresearch/anli
-        all assumed to be local for non-toy run
+- chaosNLI - project testsets, also used as training data for toy run
+- generated through terminal commands from here: https://github.com/easonnie/ChaosNLI, not setup in code
+
+  - NLI_variation - testset from here: https://github.com/epavlick/NLI-variation-data
+  - setup in notebook w/ requests library
+   
+not in submission due to size, all training sets:
+- Stanford NLI
+- MultiNLI
+- Adversarial NLI
+- All built from terminal from here: https://github.com/facebookresearch/anli
+- All assumed to be local for non-toy run
 
 models/
-    bert-base-uncased-bs32-eps6-lr5e-05
-        model directory used for project report
-        contains a filesystem with:
-            a directory 'r'+n per round n, a sibling 'results' directory for cross-round results, a json file with hyperparameters used for training
-            each 'r' dir has subdirs 'e'+n per epoch with a sibling 'results' directory for in-round results
-            each 'e' dir has various files, mostly huggingface-style model files for the corresponding model checkpoint (safetensors removed for git submission due to size), and a 'results' directory for per-epoch results
+- bert-base-uncased-bs32-eps6-lr5e-05:
+Model directory used for project report
+Contains a filesystem with:
+- a directory 'r'+n per round n, a sibling 'results' directory for cross-round results, a json file with hyperparameters used for training
+- each 'r' dir has subdirs 'e'+n per epoch with a sibling 'results' directory for in-round results
+- each 'e' dir has various files, mostly huggingface-style model files for the corresponding model checkpoint (safetensors removed for git submission due to size), and a 'results' directory for per-epoch results
             
-            all results are in plots
-    The project can generate new filesystems with the same structure into this directory.
+All results are in plots
+
+The project can generate new filesystems with the same structure into models/
 
 Running instructions:
 
