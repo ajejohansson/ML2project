@@ -41,7 +41,7 @@ Config explanation (excluding the obvious, like 'device'):
 
 "train_eval_mode": Set to "train", will only train models. Set to "eval", will only evaluate. Anything else, from "both" to "schackbräde", will do both. Run first with "train" then with "eval" (with no other config changes, which is ill-adviced) is equivalent to one full run
 
-"manual_modelname": specifies the name of the model directory (/models nearest subdirectory string, no additional path information) that will be created and/or evaluated. If falsy, will use a default model naming scheme, e.g. "toy_models" for toy runs. If "train_eval_mode" = "eval", should be the name of an existing directory in /models, otherwise any string
+"manual_modelname": specifies the name of the model directory (/models nearest subdirectory string, no additional path information) that will be created and/or evaluated. If falsy, will use a default model naming scheme, e.g. "toy_models" for toy runs. If "train_eval_mode" = "eval", should be the name of an existing directory in /models, otherwise any string or any false value.
 
 "overwrite": If truthy, training will overwrite the directory of the old model with the designated name if it exists (whether that be a default name or a manual name). Since non-toy runs default names use hyperparameter information for name constructions, will overwrite a model run on the same hyperparameters. If falsy, will create a name variant if name already exists, e.g. "toy-model" --> "toy-model_2". No effect if "train_eval_mode" = "eval"
 
