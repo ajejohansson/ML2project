@@ -1,0 +1,15 @@
+{
+    "device": "cuda:1",
+    "seed": 1,
+    "toy_run": true,
+    "train_eval_mode": "both",
+    "manual_modelname": false,
+    "overwrite": false,
+    "model_id": "bert_base",
+    "manual_hyperparams": {
+        "use": false,
+        "batch_size": 4,
+        "epochs": 2,
+        "lr" : 0.01
+    }
+}
