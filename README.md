@@ -2,13 +2,14 @@
 Andreas Johansson repository for LT2326 final project
 
 Content (as of submission):
+
 project.ipynb - main code, notebook designed to be runnable as a script
 
 data/
 - chaosNLI - project testsets, also used as training data for toy run
-- generated through terminal commands from here: https://github.com/easonnie/ChaosNLI, not setup in code
+  - generated through terminal commands from here: https://github.com/easonnie/ChaosNLI, not setup in code
 
-  - NLI_variation - testset from here: https://github.com/epavlick/NLI-variation-data
+- NLI_variation - testset from here: https://github.com/epavlick/NLI-variation-data
   - setup in notebook w/ requests library
    
 not in submission due to size, all training sets:
@@ -20,7 +21,9 @@ not in submission due to size, all training sets:
 
 models/
 - bert-base-uncased-bs32-eps6-lr5e-05:
+
 Model directory used for project report
+
 Contains a filesystem with:
 - a directory 'r'+n per round n, a sibling 'results' directory for cross-round results, a json file with hyperparameters used for training
 - each 'r' dir has subdirs 'e'+n per epoch with a sibling 'results' directory for in-round results
@@ -43,7 +46,7 @@ Config explanation (excluding the obvious, like 'device'):
 
 "toy_run": whether notebook will use toy parameters and data. Must be truthy since 1. non-toy training data is not in repository, and 2. new full models would take too long to train anyway.
 
-"train_eval_mode": Set to "train", will only train models. Set to "eval", will only evaluate. Anything else, from "both" to "schackbräde", will do both. Run first with "train" then with "eval" (with no other config changes, which is ill-adviced) is equivalent to one full run
+"train_eval_mode": Set to "train", will only train model and save checkpoints. Set to "eval", will only evaluate. Anything else, from "both" to "schackbräde", will do both. Run first with "train" then with "eval" (with no other config changes, which is ill-adviced) is equivalent to one full run
 
 "manual_modelname": specifies the name of the model directory (/models nearest subdirectory string, no additional path information) that will be created and/or evaluated. If falsy, will use a default model naming scheme, e.g. "toy_models" for toy runs. If "train_eval_mode" = "eval", should be the name of an existing directory in /models, otherwise any string or any false value.
 
